@@ -4,7 +4,7 @@ interface iContact {
  name: string,
  phoneNumber: string,
  type : string,
- contactAvatar
+ contactAvatar : string
 
 }
 

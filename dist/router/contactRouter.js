@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const contactController_1 = require("../controller/contactController");
+const router = (0, express_1.Router)();
+router.route("/:contactAvatar/view-alpha").get(contactController_1.getContactByAlphabet);
+router.route("/:type/get-types").get(contactController_1.getContactsByType);
+router.route("/create").post(contactController_1.createContact);
+router.route("/:id/delete").delete(contactController_1.deleteOneContact);
+router.route("/:id/update").patch(contactController_1.updateOneContact);
+router.route("/:id/get-one").get(contactController_1.readOneContact);
+router.route("/get-all").get(contactController_1.readAllContacts);
+exports.default = router;
